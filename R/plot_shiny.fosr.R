@@ -131,7 +131,7 @@ plot_shiny.fosr = function(obj, xlab = "", ylab="", title = "", ...) {
           {
             p1 <- ggplot(y.obs.m, aes(x=grid, y=value, group = subj, color = covariate)) + geom_line(alpha = .4) +
                   theme_classic() + xlab(xlab) + ylab("") + theme(legend.position="bottom", legend.title=element_blank())+
-                  scale_color_viridis_c(option = "plasma")
+                  scale_colour_brewer(palette = "Dark2")
           }
              else
                {
