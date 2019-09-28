@@ -125,10 +125,10 @@ plot_shiny.fosr = function(obj, xlab = "", ylab="", title = "", ...) {
 
         if(is.null(y.obs.m$covariate)){
           p1 <- ggplot(y.obs.m, aes(x=grid, y=value, group = subj)) + geom_line(alpha = .3, color="black") +
-            theme_bw() + xlab("") + ylab("")
+            theme_classic() + xlab("") + ylab("")
         } else {
           p1 <- ggplot(y.obs.m, aes(x=grid, y=value, group = subj, color = covariate)) + geom_line(alpha = .3) +
-            theme_bw() + xlab("") + ylab("") + theme(legend.position="bottom", legend.title=element_blank())
+            theme_classic() + xlab("") + ylab("") + theme(legend.position="bottom", legend.title=element_blank())
         }
       })
 
