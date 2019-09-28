@@ -129,7 +129,7 @@ plot_shiny.fosr = function(obj, xlab = "", ylab="", title = "", ...) {
         } else {
           p1 <- ggplot(y.obs.m, aes(x=grid, y=value, group = subj, color = covariate)) + geom_line(alpha = .3) +
             theme_classic() + xlab(xlab) + ylab("") + theme(legend.position="bottom", legend.title=element_blank())+
-            scale_color_brewer(palette = "Greens")
+            scale_color_gradient(low='#05D9F6', high='#5011D1')
         }
       })
 
