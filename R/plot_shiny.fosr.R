@@ -186,7 +186,7 @@ plot_shiny.fosr = function(obj, xlab = "", ylab="", title = "", ...) {
         df <- data.frame(grid = grid,
                    fit.vals = fit.vals)
 
-        p2 <- ggplot(df, aes(x = grid, y = fit.vals)) + geom_line(lwd=1) + theme_bw() +
+        p2 <- ggplot(df, aes(x = grid, y = fit.vals)) + geom_line(lwd=1) + theme_classic() +
           xlab(xlab) + ylab(ylab) + ylim(c(.9, 1.1) * range(fosr.obj$Yhat))
 
       })
@@ -207,7 +207,7 @@ plot_shiny.fosr = function(obj, xlab = "", ylab="", title = "", ...) {
         p3 <- ggplot(df, aes(x=grid, y=coef))+geom_line(linetype=1, lwd=1.5, color="black")+
           geom_line(data = df, aes(y=UB), color = "blue") +
           geom_line(data = df, aes(y=LB), color = "blue")+
-          theme_bw() + xlab("") + ylab("")
+          theme_classic() + xlab(xlab) + ylab(ylab)
 
       })
 
