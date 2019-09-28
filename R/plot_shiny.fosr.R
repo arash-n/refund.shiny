@@ -131,13 +131,13 @@ plot_shiny.fosr = function(obj, xlab = "", ylab="", title = "", ...) {
           {
             p1 <- ggplot(y.obs.m, aes(x=grid, y=value, group = subj, color = covariate)) + geom_line(alpha = .4) +
                   theme_classic() + xlab(xlab) + ylab("") + theme(legend.position="bottom", legend.title=element_blank())+
-                  scale_color_brewer(type='Dark2')
+                  scale_color_viridis_c(option = "plasma")
           }
              else
                {
                 p1 <- ggplot(y.obs.m, aes(x=grid, y=value, group = subj, color = covariate)) + geom_line(alpha = .4) +
                   theme_classic() + xlab(xlab) + ylab("") + theme(legend.position="bottom", legend.title=element_blank())+
-                  scale_color_gradient2(midpoint=median(y.obs.m$covariate))
+                  scale_color_viridis_c(option = "plasma")
                }
         }
       })
@@ -167,7 +167,7 @@ plot_shiny.fosr = function(obj, xlab = "", ylab="", title = "", ...) {
 
       callModule(tabPanelModule, "spaghetti", plotObject = plotInputSpagheti, plotName = "spaghetti")
       callModule(tabPanelModule, "lasagna", plotObject = plotInputLasagna, plotName = "lasagna", is.grid = TRUE)
-
+      
       #################################
       ## Code for FittedValues Tab
       #################################
