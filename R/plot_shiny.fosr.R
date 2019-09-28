@@ -127,15 +127,15 @@ plot_shiny.fosr = function(obj, xlab = "", ylab="", title = "", ...) {
           p1 <- ggplot(y.obs.m, aes(x=grid, y=value, group = subj)) + geom_line(alpha = .3, color="black",linetype = "dashed") +
             theme_classic() + xlab(xlab) + ylab("")
         } else {
-          if(is.factor((y.obs.m$covariate))
+          if(is.factor(y.obs.m$covariate))
           {
-            p1 <- ggplot(y.obs.m, aes(x=grid, y=value, group = subj, color = covariate)) + geom_line(alpha = .3) +
+            p1 <- ggplot(y.obs.m, aes(x=grid, y=value, group = subj, color = covariate)) + geom_line(alpha = .4) +
                   theme_classic() + xlab(xlab) + ylab("") + theme(legend.position="bottom", legend.title=element_blank())+
                   scale_color_brewer(type='qual')
           }
              else
                {
-                p1 <- ggplot(y.obs.m, aes(x=grid, y=value, group = subj, color = covariate)) + geom_line(alpha = .3) +
+                p1 <- ggplot(y.obs.m, aes(x=grid, y=value, group = subj, color = covariate)) + geom_line(alpha = .4) +
                   theme_classic() + xlab(xlab) + ylab("") + theme(legend.position="bottom", legend.title=element_blank())+
                   scale_color_gradient(low='blue', high='red')
                }
